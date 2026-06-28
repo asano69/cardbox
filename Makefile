@@ -24,4 +24,8 @@ dev: kill-ports
 	cd frontend && pnpm run dev
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5930608 (init)
 
