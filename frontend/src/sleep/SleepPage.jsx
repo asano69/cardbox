@@ -1,5 +1,6 @@
 import { createSignal, onMount, For } from "solid-js";
 import { pb } from "../shared/api/pb.js";
+import SleepChart from "./SleepChart.jsx";
 import "./SleepPage.css";
 
 function nowDate() {
@@ -98,31 +99,33 @@ export default function Sleep() {
         <button type="submit">Add</button>
       </form>
 
-  <div class="table-wrapper">
-    <table>
-  <thead>
-    <tr>
-      <th>date</th>
-      <th>time</th>
-      <th>quality</th>
-      <th>tags</th>
-    </tr>
-  </thead>
+      <SleepChart logs={recentLogs()} />
 
-  <tbody>
-    <For each={recentLogs()}>
-      {(log) => (
-        <tr>
-          <td>{log.date}</td>
-          <td>{log.time}</td>
-          <td>{log.quality}</td>
-          <td>{log.tags?.join(", ")}</td>
-        </tr>
-      )}
-    </For>
-  </tbody>
-</table>
-    </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>date</th>
+              <th>time</th>
+              <th>quality</th>
+              <th>tags</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <For each={recentLogs()}>
+              {(log) => (
+                <tr>
+                  <td>{log.date}</td>
+                  <td>{log.time}</td>
+                  <td>{log.quality}</td>
+                  <td>{log.tags?.join(", ")}</td>
+                </tr>
+              )}
+            </For>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
