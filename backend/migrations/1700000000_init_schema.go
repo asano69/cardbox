@@ -7,7 +7,7 @@ import (
 	m "github.com/pocketbase/pocketbase/migrations"
 )
 
-//go:embed schema.json
+//go:embed pb_schema.json
 var schemaJSON []byte
 
 func init() {
