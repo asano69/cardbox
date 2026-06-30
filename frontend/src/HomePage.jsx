@@ -14,7 +14,7 @@ export default function App() {
     try {
       const res = await pb
         .collection("quote_cards")
-        .getList(1, 7, { sort: "-created" });
+        .getList(1, 100, { sort: "-created" });
       setRecentLogs(res.items);
     } catch (error) {
       console.error("Failed to load recent logs:", error);
@@ -25,7 +25,6 @@ export default function App() {
   return (
     <div>
       <h1>Quotebox</h1>
-      <A href="/about">About</A>
       <A href="/new">Add Quote</A>
       <QuoteTable logs={recentLogs()} />
     </div>
