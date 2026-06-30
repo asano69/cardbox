@@ -8,7 +8,7 @@ export default function QuoteInputPage() {
   const addLog = async (data) => {
     try {
       await pb.collection("quote_cards").create(data);
-      navigate("/quote"); // go to the list page after saving
+      navigate("/"); // go to the list page after saving
     } catch (error) {
       console.error("Failed to save:", error);
       alert("Error: " + error.message);
