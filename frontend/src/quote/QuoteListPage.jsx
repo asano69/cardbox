@@ -1,4 +1,3 @@
-
 import { createSignal, onMount } from "solid-js";
 import { A } from "@solidjs/router";
 import { pb } from "../shared/api/pb.js";
@@ -24,8 +23,8 @@ export default function QuoteListPage() {
 
   return (
     <div>
-      <h1>Quote Log</h1>
-      <A href="/quote/new">Add Quote</A>
+      <h1>Cardbox</h1>
+      <A href="/quote/new">Add Card</A>
       <QuoteTable logs={recentLogs()} />
     </div>
   );
