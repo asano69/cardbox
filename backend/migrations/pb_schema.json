@@ -167,7 +167,9 @@
     },
     "passwordAuth": {
       "enabled": true,
-      "identityFields": ["email"]
+      "identityFields": [
+        "email"
+      ]
     },
     "mfa": {
       "enabled": false,
@@ -343,7 +345,9 @@
     },
     "passwordAuth": {
       "enabled": true,
-      "identityFields": ["email"]
+      "identityFields": [
+        "email"
+      ]
     },
     "mfa": {
       "enabled": false,
@@ -388,13 +392,13 @@
     }
   },
   {
-    "id": "pbc_3296033863",
-    "listRule": "",
-    "viewRule": "",
-    "createRule": "",
-    "updateRule": "",
-    "deleteRule": "",
-    "name": "sleep_logs",
+    "id": "pbc_4190959336",
+    "listRule": null,
+    "viewRule": null,
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null,
+    "name": "quote_cards",
     "type": "base",
     "fields": [
       {
@@ -414,46 +418,48 @@
       },
       {
         "autogeneratePattern": "",
-        "help": "2000-01-01",
+        "help": "",
         "hidden": false,
-        "id": "text3718809742",
+        "id": "text999008199",
         "max": 0,
         "min": 0,
-        "name": "date",
-        "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+        "name": "text",
+        "pattern": "",
         "presentable": false,
         "primaryKey": false,
-        "required": true,
+        "required": false,
         "system": false,
         "type": "text"
       },
       {
         "autogeneratePattern": "",
-        "help": "07:00",
+        "help": "",
         "hidden": false,
-        "id": "text1872009285",
+        "id": "text3485334036",
         "max": 0,
         "min": 0,
-        "name": "time",
-        "pattern": "^(?:[01]\\d|2[0-3]):[0-5]\\d$",
+        "name": "note",
+        "pattern": "",
         "presentable": false,
         "primaryKey": false,
-        "required": true,
+        "required": false,
         "system": false,
         "type": "text"
       },
       {
+        "autogeneratePattern": "",
         "help": "",
         "hidden": false,
-        "id": "number2092043024",
-        "max": 4,
-        "min": 1,
-        "name": "quality",
-        "onlyInt": false,
+        "id": "text3797779838",
+        "max": 0,
+        "min": 0,
+        "name": "context",
+        "pattern": "",
         "presentable": false,
-        "required": true,
+        "primaryKey": false,
+        "required": false,
         "system": false,
-        "type": "number"
+        "type": "text"
       },
       {
         "help": "",
@@ -465,6 +471,26 @@
         "required": false,
         "system": false,
         "type": "json"
+      },
+      {
+        "hidden": false,
+        "id": "autodate2990389176",
+        "name": "created",
+        "onCreate": true,
+        "onUpdate": false,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      },
+      {
+        "hidden": false,
+        "id": "autodate3332085495",
+        "name": "updated",
+        "onCreate": true,
+        "onUpdate": true,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
       }
     ],
     "indexes": [],

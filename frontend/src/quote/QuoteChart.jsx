@@ -6,7 +6,7 @@ function timeToMinutes(time) {
   return h * 60 + m;
 }
 
-export default function SleepChart(props) {
+export default function QuoteChart(props) {
   let el;
 
   createEffect(() => {

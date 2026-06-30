@@ -1,7 +1,7 @@
 import { createSignal, onMount, For } from "solid-js";
 import { pb } from "../shared/api/pb.js";
-import SleepChart from "./SleepChart.jsx";
-import "./SleepPage.css";
+import QuoteChart from "./QuoteChart.jsx";
+import "./QuotePage.css";
 
 function nowDate() {
   const d = new Date();
@@ -18,7 +18,7 @@ function nowTime() {
   return `${hh}:${min}`;
 }
 
-export default function Sleep() {
+export default function Quote() {
   const [date, setDate] = createSignal(nowDate());
   const [time, setTime] = createSignal(nowTime());
   const [quality, setQuality] = createSignal("3");
@@ -30,7 +30,7 @@ export default function Sleep() {
   const loadRecent = async () => {
     try {
       const res = await pb
-        .collection("sleep_logs")
+        .collection("quote_cards")
         .getList(1, 7, { sort: "-date" });
       setRecentLogs(res.items);
     } catch (error) {
@@ -44,7 +44,7 @@ export default function Sleep() {
     e.preventDefault();
 
     try {
-      await pb.collection("sleep_logs").create({
+      await pb.collection("quote_cards").create({
         date: date(),
         time: time(),
         quality: Number(quality()),
@@ -67,7 +67,7 @@ export default function Sleep() {
 
   return (
     <div>
-      <h1>Sleep Log</h1>
+      <h1>Quote Log</h1>
       <form onSubmit={addLog}>
         <input
           type="date"
@@ -99,7 +99,7 @@ export default function Sleep() {
         <button type="submit">Add</button>
       </form>
 
-      <SleepChart logs={recentLogs()} />
+      <QuoteChart logs={recentLogs()} />
 
       <div class="table-wrapper">
         <table>
