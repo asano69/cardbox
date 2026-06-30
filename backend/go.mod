@@ -1,4 +1,4 @@
-module my-app
+module quotebox
 
 go 1.25.9
 

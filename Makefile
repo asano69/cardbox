@@ -1,5 +1,5 @@
 
-APP_NAME := my-app
+APP_NAME := quotebox
 BIN_DIR  := bin
 
 BACKEND_PORT  := 3000

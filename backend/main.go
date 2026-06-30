@@ -10,7 +10,7 @@ import (
 	"github.com/pocketbase/pocketbase/core"
 	"github.com/pocketbase/pocketbase/plugins/migratecmd"
 
-	_ "my-app/migrations"
+	_ "quotebox/migrations"
 )
 
 // pbPublicDir embeds the built frontend assets at compile time.
